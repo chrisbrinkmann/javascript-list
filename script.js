@@ -1,3 +1,11 @@
+/*
+* The function of this script is to:
+* 1. Append new <li> elements to the <ul> per user input in the text box.
+* 2. Remove <li> elements from the <ul> when a user clicks the delete button in that <li>.
+* 3. Toggle a class on the <li> elements which will style the text as strikethru when the user clicks the <li> text.
+* 4. New <li> elements that are appended should fulfill reqs 2 and 3.
+*/
+
 // cache the relevant elements in variables
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
@@ -66,7 +74,6 @@ input.addEventListener("keypress", addListAfterKeypress);
 liNodeList.forEach(function(li){
 	li.addEventListener("click", toggleDone);
 });
-
 deletebtnNodeList.forEach(function(btn){
 	btn.addEventListener("click", deleteListItem);
 });
